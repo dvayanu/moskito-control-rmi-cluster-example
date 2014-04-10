@@ -1,1 +1,1 @@
-java -cp src/main/resources:target/moskito-control-rmi-cluster-example-1.0-SNAPSHOT-jar-with-dependencies.jar example.Daemon
+java -cp src/main/resources:target/moskito-control-rmi-cluster-example-1.0-SNAPSHOT-jar-with-dependencies.jar -DlocalRmiRegistryPort=$1 example.Daemon 
