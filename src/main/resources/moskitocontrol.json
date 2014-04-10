@@ -1,0 +1,57 @@
+{
+    "mailNotificationEnabled" : false,
+    "notificationsMutingTime": 60,
+    "defaultApplication" : "Daemons",
+
+    "@applications": [
+        {
+            "name": "Daemons",
+            "@components": [
+                {
+                    "name": "first",
+                    "category": "daemon",
+                    "connectorType": "RMI",
+                    "location": "localhost:9401"
+                },
+                {
+                    "name": "second",
+                    "category": "daemon",
+                    "connectorType": "RMI",
+                    "location": "localhost:9402"
+                },
+                {
+                    "name": "third",
+                    "category": "daemon",
+                    "connectorType": "RMI",
+                    "location": "localhost:9403"
+                }
+            ]
+        }
+        ],
+
+    "@connectors": [
+        {
+            "type": "HTTP",
+            "className": "org.moskito.control.connectors.HttpConnector"
+        },
+        {
+            "type": "RMI",
+            "className": "org.moskito.control.connectors.RMIConnector"
+        }
+    ],
+
+    "@statusUpdater": {
+        "checkPeriodInSeconds": 10,
+        "threadPoolSize": 10,
+        "timeoutInSeconds": 60,
+        "enabled": true
+    },
+
+    "@chartsUpdater": {
+        "checkPeriodInSeconds": 40,
+        "threadPoolSize": 5,
+        "timeoutInSeconds": 60,
+        "enabled": true
+    }
+
+}
