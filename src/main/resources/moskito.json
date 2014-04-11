@@ -38,7 +38,7 @@
     },
 
     "@accumulatorsConfig" : {
-        "accumulationAmount": 500,
+        "accumulationAmount": 100,
         "@accumulators": [
             {
                 "name": "WorkerLoad",
